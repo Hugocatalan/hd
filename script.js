@@ -1,6 +1,7 @@
-// === CONTADOR (evento en 2 días desde ahora) ===
+// === CONTADOR (evento en 2 días a las 16:00) ===
 const fechaEvento = new Date();
-fechaEvento.setDate(fechaEvento.getDate() + 2);
+fechaEvento.setDate(fechaEvento.getDate() + 2); // Sumamos 2 días
+fechaEvento.setHours(16, 0, 0, 0); // Ajustamos a las 16:00:00
 
 setInterval(() => {
   const ahora = new Date().getTime();
@@ -33,3 +34,4 @@ uploadInput.addEventListener("change", (event) => {
     reader.readAsDataURL(file);
   }
 });
+
